@@ -6,6 +6,7 @@ const cors = require('cors')
 
 app.use(cors({ origin: 'http://localhost:5173' }))
 app.use(express.json())
+app.use(express.static('dist'))
 
 app.get('/', (request, response) => {
   response.send('<h1>Hello World!</h1>')
